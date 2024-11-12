@@ -1,0 +1,68 @@
+// Colors
+$beige-500: #98908B; 
+$beige-100: #F8F4F0;
+$grey-900: #201F24; 
+$grey-500: #696868; 
+$grey-300: #B3B3B3;
+$grey-100: #F2F2F2;
+$green: #277C78; 
+$yellow: #F2CDAC; 
+$cyan: #82C9D7; 
+$navy: #626070; 
+$red: #C94736; 
+$purple: #826CB0; 
+$turquoise: #597C7C; 
+$brown: #93674F;
+$magenta: #934F6F; 
+$blue: #3F82B2; 
+$navy-grey: #97A0AC; 
+$army-green: #7F9161; 
+$gold: #CAB361;
+$orange: #BE6C49;
+$white: #FFFFFF;
+
+//Typography
+@font-face {
+    font-family: 'Public Sans Regular';
+    src: url('../assets/fonts/PublicSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Public Sans Bold';
+    src: url('../assets/fonts/PublicSans-Bold.ttf') format('truetype');
+}
+
+.text-preset-1{
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size:32px;
+    line-height: 120%;
+}
+.text-preset-2{
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size:20px;
+    line-height: 120%;
+}
+.text-preset-3{
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+}
+.text-preset-4{
+    font-family: 'Public Sans Regular', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+}
+.text-preset-4-bold{
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+}
+.text-preset-5{
+    font-family: 'Public Sans Regular', sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+}
+.text-preset-5-bold{
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+}
