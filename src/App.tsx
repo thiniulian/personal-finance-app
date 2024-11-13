@@ -1,21 +1,28 @@
 import "./App.css";
 import "./scss/main.scss";
 import { Button } from "./components/button/Button";
+import CaretRight from "./assets/images/icon-caret-right.svg?react";
 
 function App() {
   return (
     <>
       <div>
         <Button onClick={() => {}} disabled={false} className={"destroy"}>
-          <span>Yes, Confirm Deletion</span>
+          <span>Placeholder</span>
         </Button>
 
         <Button onClick={() => {}} disabled={false} className={"primary"}>
-          <span>Add Budget</span>
+          <span>Placeholder</span>
         </Button>
 
-        <Button onClick={() => {}} disabled={false} className={"secondary"}>
-          <span> + Add Money</span>
+        <Button onClick={() => {}} className={"secondary"}>
+          <span>Placeholder</span>
+        </Button>
+        <Button onClick={() => {}} className={"tertiary"}>
+          <span>Placeholder</span>
+          <span>
+            <CaretRight className="icon" />
+          </span>
         </Button>
       </div>
     </>
