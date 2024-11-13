@@ -1,0 +1,51 @@
+@import "../../scss/colors";
+@import "../../scss/typography";
+
+button {
+  border-radius: 8px;
+  width: 496px;
+  height: 53px;
+  padding: auto;
+  border: none;
+  line-height: 53px;
+  justify-content: center;
+  margin: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: $grey-900;
+  color: $white;
+  @extend .text-preset-4-bold;
+  &:disabled {
+    background-color: $grey-300;
+  }
+  &:hover {
+    background-color: $grey-500;
+  }
+}
+
+.secondary {
+  background-color: $beige-100;
+  color: $grey-900;
+  @extend .text-preset-4-bold;
+}
+
+.destroy {
+  background-color: $red;
+  color: $white;
+  @extend .text-preset-4-bold;
+  &:disabled {
+    opacity: 80%;
+  }
+  &:hover {
+    opacity: 80%;
+  }
+}
