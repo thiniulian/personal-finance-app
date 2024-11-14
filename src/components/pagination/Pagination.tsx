@@ -1,14 +1,15 @@
 import './pagination.scss'; 
-import Left from '../../assets/images/icon-caret-left.svg';
+// import Left from '../../assets/images/icon-caret-left.svg';
 import Right from '../../assets/images/icon-caret-right.svg';
-// import { ReactComponent as Left} from '../../assets/images/icon-caret-left.svg';
+import Left from '../../assets/images/icon-caret-left.svg?react';
+// import Logo from "./logo.svg?react"
 
 export default function Pagination () {
     return(
         <div className='Pagination'>
             <button className='page-nav-btn'>
-                <img src={Left} alt='Previous Button'/>
-                {/* <Left/> */}
+                {/* <img src={Left} alt='Previous Button'/> */}
+                <Left/>
             </button>
 
             <div className='all-page-btns'>
