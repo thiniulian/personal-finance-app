@@ -1,6 +1,7 @@
 import "./App.css";
 import "./scss/main.scss";
 import { Button } from "./components/button/Button";
+import Pagination from "./components/pagination/Pagination";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           <span> + Add Money</span>
         </Button>
       </div>
+      
+      <Pagination></Pagination>
+
     </>
   );
 }
