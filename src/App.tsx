@@ -1,6 +1,8 @@
 import "./App.css";
 import "./scss/main.scss";
 import { Button } from "./components/button/Button";
+
+import Pagination from "./components/pagination/Pagination";
 import CaretRight from "./assets/images/icon-caret-right.svg?react";
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
       <Button onClick={() => {}} disabled={false} className={"destroy"}>
         <span>Placeholder</span>
       </Button>
+        
+      <Pagination></Pagination>
     </>
   );
 }
