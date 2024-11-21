@@ -54,7 +54,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            @extend .text-preset-4; 
+            @include text-preset-4; 
         }
         .active{
             background-color: $grey-900;

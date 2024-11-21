@@ -1,8 +1,9 @@
 import "./App.css";
 import "./scss/main.scss";
 import { Button } from "./components/button/Button";
-
 import Pagination from "./components/pagination/Pagination";
+import Sidebar from "./components/sidebar/sidebarComponent/Sidebar";
+
 import CaretRight from "./assets/images/icon-caret-right.svg?react";
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
       </Button>
         
       <Pagination></Pagination>
+
+      <Sidebar></Sidebar>
     </>
   );
 }
