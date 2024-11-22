@@ -27,11 +27,11 @@ export default function Sidebar(){
 
     return(
         <div className="sidebar-container">
-            <SidebarItem isSelected = {true} icon={menuItems[0].icon} label={menuItems[0].label}></SidebarItem>
+            {/* <SidebarItem isSelected = {true} icon={menuItems[0].icon} label={menuItems[0].label}></SidebarItem> */}
 
             { 
             menuItems.map((item) : JSX.Element  => {
-                return <SidebarItem isSelected = {false} icon={item.icon} label={item.label} key={item.label}></SidebarItem>
+                return <SidebarItem isSelected = {item.label=='Overview'? true: false} icon={item.icon} label={item.label} key={item.label}></SidebarItem>
                 })
             }
             
