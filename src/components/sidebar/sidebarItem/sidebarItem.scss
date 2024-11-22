@@ -9,10 +9,11 @@
     flex-direction: column;
     align-items: center;
     padding-top: 0.5rem; //8px;
-    border-radius: unset;
-    background-color: $grey-900;
+    background-color:$grey-900;
     color: $grey-300;
     border:none;
+    border-bottom: 4px solid transparent;
+    border-radius: 8px 8px 0 0;
     @include text-preset-5-bold;
     &:hover{
         color:$grey-100;       
@@ -64,6 +65,9 @@
         flex-direction:row;
         padding: 1rem 0 1rem 2rem;
         gap: 1rem;
+        border-bottom:none;
+        border-left: 4px solid transparent;
+        border-radius: 0 12px 12px 0;
         @include text-preset-3;
     }
     .selected, .selected:hover{

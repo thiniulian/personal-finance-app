@@ -2,12 +2,22 @@
 @import "../../../scss/colors";
 
 .sidebar-container{
+    min-width:fit-content;
     background-color: $grey-900;
     padding:0.5rem 1rem 0 1rem;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
     border-radius: 8px 8px 0 0;
+    .sidebar-header, .toggle-sidebar{
+        display: none;
+    }
+    ul{
+        list-style: none;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    a{
+        text-decoration: none;
+    }
 }
 
 @media (min-width: $tablet-size){
@@ -18,6 +28,29 @@
 
 @media (min-width: $desktop-size){
     .sidebar-container{
+        width: 18.75rem;//300px;
+        min-height:fit-content;
+        height:100vh;
+        padding: 0;
+        border-radius: 0 1rem 1rem 0;
+        display:flex;
         flex-direction: column;
+        gap:1.5rem;//24px;
+        ul{
+            flex-grow:1;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap:4px;
+        }
+        .sidebar-header, .toggle-sidebar{
+            display: block;
+        }
+        .sidebar-header{
+            color:$white;
+            padding: 2.5rem 9.16rem 2.5rem 2rem;//40px 146.55px 40px 32px;
+        }
+        .toggle-sidebar{
+            padding-bottom:3.64rem;//58.24px;
+        }
     }
 }

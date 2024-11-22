@@ -1,0 +1,24 @@
+@import "./scss/main.scss";
+
+.app{
+    background-color: $beige-100;
+    min-height: 100vh;
+    min-width: fit-content;
+    display: flex; 
+    flex-direction:column-reverse; 
+    justify-content: space-between;
+    position:relative;
+    .sidebar-container{
+        position:sticky;
+        bottom:0;
+    }
+}
+
+@media (min-width:$desktop-size){
+    .app{
+        flex-direction:row;
+        .pages{
+            flex-grow:1;
+        }
+    }
+}
