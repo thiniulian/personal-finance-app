@@ -1,12 +1,12 @@
 import { Button } from "../../button/Button";
 import Pagination from "../../pagination/Pagination";
+import EntityListItem from "../../entityListItem/EntityListItem";
+import CaretRight from "../../../assets/images/icon-caret-right.svg?react";
 
-import CaretRight from '../../../assets/images/icon-caret-right.svg?react'; 
-
-export default function Overview(){
-    return(
+export default function Overview() {
+  return (
     <section className="overview">
-        <Button onClick={() => {}} disabled={false} className={"primary"}>
+      <Button onClick={() => {}} disabled={false} className={"primary"}>
         <span>Placeholder</span>
       </Button>
 
@@ -23,16 +23,47 @@ export default function Overview(){
       <Button onClick={() => {}} disabled={false} className={"destroy"}>
         <span>Placeholder</span>
       </Button>
-        
+      <div>
+        <EntityListItem
+          entityVisual="/avatars/aqua-flow-utilities.jpg"
+          entityTitle="Aqua Flow Utilities - Bills"
+        ></EntityListItem>
+
+        <EntityListItem
+          entityVisual="/avatars/emma-richardson.jpg"
+          entityTitle="Emma Richardson - General"
+        ></EntityListItem>
+      </div>
+
       <Pagination></Pagination>
       <div>
         <h1>Content de umplutura</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem assumenda mollitia minus velit impedit nemo laborum asperiores sunt soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt alias itaque.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem assumenda mollitia minus velit impedit nemo laborum asperiores sunt soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt alias itaque.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem assumenda mollitia minus velit impedit nemo laborum asperiores sunt soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt alias itaque.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem assumenda mollitia minus velit impedit nemo laborum asperiores sunt soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt alias itaque.</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+          assumenda mollitia minus velit impedit nemo laborum asperiores sunt
+          soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt
+          alias itaque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+          assumenda mollitia minus velit impedit nemo laborum asperiores sunt
+          soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt
+          alias itaque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+          assumenda mollitia minus velit impedit nemo laborum asperiores sunt
+          soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt
+          alias itaque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+          assumenda mollitia minus velit impedit nemo laborum asperiores sunt
+          soluta, non tenetur esse facere ipsam ut quas necessitatibus, nesciunt
+          alias itaque.
+        </p>
         <p>ultimul paragraf</p>
       </div>
     </section>
-    );
+  );
 }
