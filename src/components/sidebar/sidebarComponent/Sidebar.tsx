@@ -8,7 +8,7 @@ import MenuOption from "../../../types/MenuOption";
 
 import "./sidebar.scss";
 
-export default function Sidebar({menuOptions} : MenuOption[]){
+export default function Sidebar({menuOptions} : {menuOptions:MenuOption[]}){
     const [collapsed, setCollapsed] = useState(false); 
     function toggleMenu(){
         setCollapsed(!collapsed)
