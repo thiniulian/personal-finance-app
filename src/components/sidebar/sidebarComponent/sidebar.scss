@@ -28,14 +28,16 @@
 
 @media (min-width: $desktop-size){
     .sidebar-container{
-        width: 18.75rem;//300px;
+        width: 19rem;//304px (300 in figma);
         min-height:fit-content;
         height:100vh;
         padding: 0;
+        padding-right:1.5rem;
         border-radius: 0 1rem 1rem 0;
         display:flex;
         flex-direction: column;
         gap:1.5rem;//24px;
+
         ul{
             flex-grow:1;
             flex-direction: column;
@@ -45,12 +47,46 @@
         .sidebar-header, .toggle-sidebar{
             display: block;
         }
+        .toggle-sidebar .sidebar-item svg {
+            transition: transform 0.3s ease-out;
+        }
         .sidebar-header{
             color:$white;
-            padding: 2.5rem 9.16rem 2.5rem 2rem;//40px 146.55px 40px 32px;
+            padding: calc(2.5rem + 1px) 2rem calc(2.5rem + 1px) calc(2.25rem + 5px);//40+1px 32 40+1px 36+5px;
         }
         .toggle-sidebar{
             padding-bottom:3.64rem;//58.24px;
         }
+        .sidebar-item{
+            transition: width 0.3s ease-out;
+        } // de aici vine extinderea lenta meniu + joc al icons la extend menu
+    }
+    .collapsed{
+        min-width: none;
+        width:5.5rem;//88px;
+        transition: width 0.3s ease-out;
+        .sidebar-header{
+            padding: 2.5rem 2rem 2.5rem calc(2rem + 4px); //40px 36px 40px 36px; LR=2rem+4px border - sa se alinieze cu celelalte icons
+            width:5.5rem;// 88px;
+            svg{
+                width: 1.5rem; //24px;
+                height: 1.5rem; //24px;
+            }
+        }
+        .sidebar-item{
+            width:5.5rem;//88px; 
+        }
+        .sidebar-item span:nth-of-type(2){
+            display:none;
+        }
+        .toggle-sidebar .sidebar-item{
+            svg{
+                transform: rotate(180deg);
+                transition: transform 0.3s ease-out;
+            }
+            span{
+                display:none;
+            }
+        } 
     }
 }
