@@ -33,11 +33,12 @@
     &:hover {
       background-color: $grey-500;
     }
-
+  }
   .secondary {
     background-color: $beige-100;
     color: $grey-900;
-    @extend .text-preset-4-bold;
+    //@extend .text-preset-4-bold;
+    @include text-preset-4-bold;
     &:hover {
       background-color: $white;
       border: 1px solid $beige-500;
