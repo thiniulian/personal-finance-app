@@ -1,21 +1,20 @@
 import { NavLink } from 'react-router-dom';
+import MenuOption from '../../../types/MenuOption';
+
 import './sidebarItem.scss';
 
-interface SidebarItemProps {
-    icon: string;
-    label: string; 
-    route: string;
-}
-
-export default function SidebarItem({icon, label, route}: SidebarItemProps) {
+export default function SidebarItem({icon:Icon, label, route}: MenuOption) {
     return(
-        <NavLink to={route} className={({isActive})=> isActive ? "sidebar-item selected":"sidebar-item"}>
+        <NavLink to={route} 
+        className={({isActive})=> isActive ? "sidebar-item selected":"sidebar-item"}
+        >
             <span 
             className='sidebar-item-icon'
-            dangerouslySetInnerHTML={{__html: icon }}
             role="img"
             aria-label={`icon for ${label}`}
-            ></span>
+            >
+                <Icon/>
+            </span>
             <span className='sidebar-item-label'>{label}</span>
         </NavLink>
     );

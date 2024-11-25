@@ -3,8 +3,8 @@
 @import "../../../scss/typography";
 
 .sidebar-item{
-    width: 4.2875rem;//68.6px;
-    height: 2.75rem;// 44px;
+    width: 4rem;//64px; 68.6px in figma;
+    height: 3rem;// 48px; 44px in figma;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,6 @@
     border:none;
     border-bottom: 4px solid transparent;
     border-radius: 8px 8px 0 0;
-    @include text-preset-5-bold;
     &:hover{
         color:$grey-100;       
         transition: 0.6s ease-out; 
@@ -49,8 +48,9 @@
 @media (min-width: $tablet-size){
     .sidebar-item{
         width: 6.5rem;//104px;
-        height: 4.125rem;//66px;
+        height: 4rem;//64px, 66px in figma;
         gap:4px;
+        @include text-preset-5-bold;
 
         .sidebar-item-label{
             display:block;
@@ -60,7 +60,7 @@
 
 @media (min-width: $desktop-size){
     .sidebar-item{
-        width: 17.25rem;//276px;
+        width: 17rem;// 272px, 276px in figma;
         height: 3.5rem;//56px;
         flex-direction:row;
         padding: 1rem 0 1rem 2rem;

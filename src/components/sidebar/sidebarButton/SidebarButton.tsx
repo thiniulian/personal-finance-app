@@ -1,11 +1,14 @@
 import '../sidebarItem/sidebarItem.scss'; 
 import Minimize from '../../../assets/images/icon-minimize-menu.svg?react';
-// import Maximize from '../../../assets/images/icon-maximize-menu.svg?react';
 
-export default function SidebarButton({icon} :  {icon:string}){
-    if(icon) console.log(icon); // ca sa nu-mi dea eroare ca nu folosesc variabila
+interface SidebarButtonProps{
+    onclick:() =>void; 
+}
+
+export default function SidebarButton({onclick}:SidebarButtonProps){
     return(
-        <button className="sidebar-item">
+        <button className="sidebar-item"
+        onClick={onclick}>
             <Minimize/>
             <span>Minimize Menu</span>
         </button>
