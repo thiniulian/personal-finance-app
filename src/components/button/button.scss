@@ -1,73 +1,80 @@
 @import "../../scss/colors";
 @import "../../scss/typography";
 
-button {
-  border-radius: 0.5rem;
-  width: auto;
-  height: 3.5rem;
-  padding: 1rem;
-  border: none;
-  line-height: 3.5rem;
-  justify-content: center;
-  margin: 0.5rem;
-
-  &:hover {
-    cursor: pointer;
+//added .button class to wrap the styles corresponding to Button component
+.button{ 
+  button {
+    border-radius: 0.5rem;
+    width: auto;
+    height: 3.5rem;
+    padding: 1rem;
+    border: none;
+    line-height: 3.5rem;
+    justify-content: center;
+    margin: 0.5rem;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
-
-  &:disabled {
-    cursor: not-allowed;
+  
+  .primary {
+    background-color: $grey-900;
+    color: $white;
+    // @extend .text-preset-4-bold;
+    @include text-preset-4-bold; 
+    &:disabled {
+      background-color: $grey-300;
+    }
+    &:hover {
+      background-color: $grey-500;
+    }
   }
-}
-
-.primary {
-  background-color: $grey-900;
-  color: $white;
-  @extend .text-preset-4-bold;
-  &:disabled {
-    background-color: $grey-300;
-  }
-  &:hover {
-    background-color: $grey-500;
-  }
-}
-
-.secondary {
-  background-color: $beige-100;
-  color: $grey-900;
-  @extend .text-preset-4-bold;
-  &:hover {
-    background-color: $white;
-    border: 1px solid $beige-500;
-  }
-}
-
-.tertiary {
-  @extend .text-preset-4;
-  color: $grey-500;
-  background-color: white;
-  .icon {
-    margin-left: 1rem;
-  }
-  &:hover {
+  .secondary {
+    background-color: $beige-100;
     color: $grey-900;
-    svg {
-      path {
-        fill: $grey-900;
+    //@extend .text-preset-4-bold;
+    @include text-preset-4-bold;
+    &:hover {
+      background-color: $white;
+      border: 1px solid $beige-500;
+    }
+  }
+ 
+  .tertiary {
+    // @extend .text-preset-4;
+    @include text-preset-4;
+    color: $grey-500;
+    background-color: white;
+    .icon {
+      margin-left: 1rem;
+    }
+    &:hover {
+      color: $grey-900;
+      svg {
+        path {
+          fill: $grey-900;
+        }
       }
     }
   }
-}
-.destroy {
-  background-color: $red;
-  color: $white;
-  @extend .text-preset-4-bold;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  &:disabled {
-    opacity: 80%;
-  }
-  &:hover {
-    opacity: 80%;
-    box-shadow: none;
+    
+  .destroy {
+    background-color: $red;
+    color: $white;
+    // @extend .text-preset-4-bold;
+    @include text-preset-4-bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &:disabled {
+      opacity: 80%;
+    }
+    &:hover {
+      opacity: 80%;
+      box-shadow: none;
+    }
   }
 }

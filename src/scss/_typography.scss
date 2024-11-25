@@ -7,38 +7,40 @@
   src: url("../assets/fonts/PublicSans-Bold.ttf") format("truetype");
 }
 
-.text-preset-1 {
+@mixin text-preset-1 {
   font-family: "Public Sans Bold", sans-serif;
   font-size: 2rem; //32px;
   line-height: 120%;
 }
-.text-preset-2 {
+@mixin text-preset-2 {
   font-family: "Public Sans Bold", sans-serif;
   font-size: 1.25rem; //20px;
   line-height: 120%;
 }
-.text-preset-3 {
+@mixin text-preset-3 {
   font-family: "Public Sans Bold", sans-serif;
   font-size: 1rem; //16px;
   line-height: 150%;
 }
-.text-preset-4 {
+@mixin text-preset-4 {
   font-family: "Public Sans Regular", sans-serif;
   font-size: 0.875rem;// 14px;
   line-height: 150%;
 }
-.text-preset-4-bold {
+@mixin text-preset-4-bold {
   font-family: "Public Sans Bold", sans-serif;
   font-size: 0.875rem;//14px;
   line-height: 150%;
+  font-weight:bold;
 }
-.text-preset-5 {
+@mixin text-preset-5 {
   font-family: "Public Sans Regular", sans-serif;
   font-size: 0.75rem; //12px;
   line-height: 150%;
 }
-.text-preset-5-bold {
+@mixin text-preset-5-bold {
   font-family: "Public Sans Bold", sans-serif;
   font-size: 0.75rem; //12px;
   line-height: 150%;
+  font-weight: bold;
 }

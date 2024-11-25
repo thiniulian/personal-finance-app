@@ -9,12 +9,14 @@ interface ButtonProps {
 
 export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
   return (
-    <button
+    <span className="button">
+      <button
       disabled={props.disabled}
       onClick={props.onClick}
       className={props.className}
-    >
+      >
       <span>{props.children}</span>
-    </button>
+      </button>
+    </span>
   );
 };

@@ -1,33 +1,25 @@
-import "./App.css";
-import "./scss/main.scss";
-import { Button } from "./components/button/Button";
+import { Route, Routes } from "react-router-dom";
 
-import Pagination from "./components/pagination/Pagination";
-import CaretRight from "./assets/images/icon-caret-right.svg?react";
+import Sidebar from "./components/sidebar/sidebarComponent/Sidebar";
+import Overview from "./components/pages/overview/Overview";
+import menuOptions from "./data/sidebarOptions";
+import "./App.scss";
 
 function App() {
   return (
-    <>
-      <Button onClick={() => {}} disabled={false} className={"primary"}>
-        <span>Placeholder</span>
-      </Button>
-
-      <Button onClick={() => {}} className={"secondary"}>
-        <span>Placeholder</span>
-      </Button>
-      <Button onClick={() => {}} className={"tertiary"}>
-        <span>
-          Placeholder
-          <CaretRight className="icon" />
-        </span>
-      </Button>
-
-      <Button onClick={() => {}} disabled={false} className={"destroy"}>
-        <span>Placeholder</span>
-      </Button>
-        
-      <Pagination></Pagination>
-    </>
+    <div className="app">
+      <Sidebar menuOptions = {menuOptions}></Sidebar>
+      
+      <div className="pages">
+        <Routes>
+          <Route path='/' element={<Overview/>} /> 
+          <Route path='/' element={<Overview/>} /> 
+          <Route path='/' element={<Overview/>} /> 
+          <Route path='/' element={<Overview/>} /> 
+          <Route path='/' element={<Overview/>} /> 
+        </Routes>
+      </div>
+    </div>
   );
 }
 

@@ -1,0 +1,92 @@
+@import "../../../scss/breakpoints";
+@import "../../../scss/colors";
+
+.sidebar-container{
+    min-width:fit-content;
+    background-color: $grey-900;
+    padding:0.5rem 1rem 0 1rem;
+    border-radius: 8px 8px 0 0;
+    .sidebar-header, .toggle-sidebar{
+        display: none;
+    }
+    ul{
+        list-style: none;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+@media (min-width: $tablet-size){
+    .sidebar-container{
+        padding:0.5rem 2.5rem 0 2.5rem; //8px 40px 0 40px; 
+    }
+}
+
+@media (min-width: $desktop-size){
+    .sidebar-container{
+        width: 19rem;//304px (300 in figma);
+        min-height:fit-content;
+        height:100vh;
+        padding: 0;
+        padding-right:1.5rem;
+        border-radius: 0 1rem 1rem 0;
+        display:flex;
+        flex-direction: column;
+        gap:1.5rem;//24px;
+
+        ul{
+            flex-grow:1;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap:4px;
+        }
+        .sidebar-header, .toggle-sidebar{
+            display: block;
+        }
+        .toggle-sidebar .sidebar-item svg {
+            transition: transform 0.3s ease-out;
+        }
+        .sidebar-header{
+            color:$white;
+            padding: calc(2.5rem + 1px) 2rem calc(2.5rem + 1px) calc(2.25rem + 5px);//40+1px 32 40+1px 36+5px;
+        }
+        .toggle-sidebar{
+            padding-bottom:3.64rem;//58.24px;
+        }
+        .sidebar-item{
+            transition: width 0.3s ease-out;
+        } // de aici vine extinderea lenta meniu + joc al icons la extend menu
+    }
+    .collapsed{
+        min-width: none;
+        width:5.5rem;//88px;
+        transition: width 0.3s ease-out;
+        .sidebar-header{
+            padding: 2.5rem 2rem 2.5rem calc(2rem + 4px); //40px 36px 40px 36px; LR=2rem+4px border - sa se alinieze cu celelalte icons
+            width:5.5rem;// 88px;
+            svg{
+                width: 1.5rem; //24px;
+                height: 1.5rem; //24px;
+            }
+        }
+        .sidebar-item{
+            width:5.5rem;//88px; 
+        }
+        .sidebar-item span:nth-of-type(2){
+            display:none;
+        }
+        .toggle-sidebar .sidebar-item{
+            svg{
+                transform: rotate(180deg);
+                transition: transform 0.3s ease-out;
+            }
+            span{
+                display:none;
+            }
+        } 
+    }
+}
