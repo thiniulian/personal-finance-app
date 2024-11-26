@@ -1,0 +1,22 @@
+@use "../../scss/typography";
+@use "../../scss/colors";
+
+.entityItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .entityVisual {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+  .entityTitle {
+    @include typography.text-preset-4-bold;
+    line-height: 1.5rem;
+    color: colors.$grey-900;
+    padding-left: 1rem;
+  }
+}
