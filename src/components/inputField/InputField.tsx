@@ -1,4 +1,5 @@
 import InputFieldDiv from "../../types/InputField";
+import SearchIcon from "../../assets/images/icon-search.svg?react";
 import './inputField.scss';
 
 export default function InputField({selectElement, inputType, inputDecorator, inputPlaceholder, selectDecorator, fieldTitle, helperText, onChange} : InputFieldDiv) {
@@ -26,7 +27,7 @@ export default function InputField({selectElement, inputType, inputDecorator, in
                 {inputDecorator =='prefix' ? 
                     <span className='prefix-decorator'>prefix</span> 
                     : inputDecorator=='icon' ?
-                    <span className="icon-decorator">icon</span> 
+                    <span className="icon-decorator"><SearchIcon/></span> 
                     : null
                 }
                 {selectDecorator == 'color tag'?

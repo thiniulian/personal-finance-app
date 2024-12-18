@@ -11,20 +11,27 @@
         margin-bottom: 4px;
     }
     .input-box{
-        height: 45px;
         padding: 12px 20px;
         border: 1px solid $beige-500;
         border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
         select, input{
             width: 100%;
             border:none;
             outline: none;
+            @include text-preset-4;
         }
         input::placeholder{
-            @include text-preset-4;
             color:$beige-500;
         }
-        .prefix-decorator, .color-tag-decorator, .icon-decorator{
+        .prefix-decorator, .icon-decorator{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .color-tag-decorator{
             display:none;
         }
     }
