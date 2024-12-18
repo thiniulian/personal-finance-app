@@ -1,7 +1,7 @@
-import { Button } from "../../button/Button";
-import Pagination from "../../pagination/Pagination";
-import EntityListItem from "../../entityListItem/EntityListItem";
-import CaretRight from "../../../assets/images/icon-caret-right.svg?react";
+import { Button } from "../../components/button/Button";
+import Pagination from "../../components/pagination/Pagination";
+import EntityListItem from "../../components/entityListItem/EntityListItem";
+import CaretRight from "../../assets/images/icon-caret-right.svg?react";
 
 export default function Overview() {
   return (

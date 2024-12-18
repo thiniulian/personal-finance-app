@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
 import Sidebar from "./components/sidebar/sidebarComponent/Sidebar";
-import Overview from "./components/pages/overview/Overview";
+import Overview from "./pages/overview/Overview";
+import Transactions from "./pages/transactions/Transactions";
 import menuOptions from "./data/sidebarOptions";
 import "./App.scss";
 
@@ -13,7 +14,7 @@ function App() {
       <div className="pages">
         <Routes>
           <Route path='/' element={<Overview/>} /> 
-          <Route path='/' element={<Overview/>} /> 
+          <Route path='/transactions' element={<Transactions/>} /> 
           <Route path='/' element={<Overview/>} /> 
           <Route path='/' element={<Overview/>} /> 
           <Route path='/' element={<Overview/>} /> 

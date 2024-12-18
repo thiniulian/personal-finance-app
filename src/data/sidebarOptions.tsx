@@ -14,7 +14,7 @@ const menuOptions : MenuOption[] = [
     {
         icon: TranzactionsIcon, 
         label: 'Transactions',
-        route: '/transaction' 
+        route: '/transactions' 
     }, 
     {
         icon: BudgetsIcon, 
