@@ -16,8 +16,10 @@
         border-radius: 0.5rem;
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        @include text-preset-4;
+        color:$beige-500;
         select, input{
+            order:2;
             width: 100%;
             border:none;
             outline: none;
@@ -30,6 +32,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+        .prefix-decorator{
+            order: 1;
+            margin-right: 12px;
+        }
+        .icon-decorator{
+            order:3;
+            margin-left:1rem;
         }
         .color-tag-decorator{
             display:none;
