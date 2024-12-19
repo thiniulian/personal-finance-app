@@ -1,4 +1,4 @@
-import "./EntityListItem.scss";
+import "./entityListItem.scss";
 
 interface EntityListItemProps {
   entityVisual: string;
