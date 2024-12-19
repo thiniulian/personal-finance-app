@@ -12,12 +12,13 @@ export default function Transactions () {
             <div 
             style={{margin: "1rem", display: "flex", flexDirection: "column", gap:"1rem", maxWidth: 380 }}
             >
+            <InputField selectElement={true} fieldTitle={'Field with dropdown'} selectDecorator={"basic"}/>
+            <InputField selectElement={true} fieldTitle={'Field with color tag'} selectDecorator={"color tag"}/>
+            
             <InputField selectElement={false} fieldTitle={'Basic Field'} inputPlaceholder={'Placeholder'} helperText={'Min 3 char'} inputDecorator={"basic"}/>
-            <InputField selectElement={false} fieldTitle={'Field with icon'} inputPlaceholder={'Placeholder'} inputDecorator={'icon'} onChange={handleChange}/>
+            <InputField selectElement={false} fieldTitle={'Field with icon'} inputPlaceholder={'Placeholder'}  helperText={'Helper text'} inputDecorator={'icon'} onChange={handleChange}/>
             <InputField selectElement={false} fieldTitle={'Field with prefix'} inputPlaceholder={'Placeholder'} inputDecorator={'prefix'}/>
-            <InputField selectElement={true} fieldTitle={'Name'} inputPlaceholder={'basic'} helperText={'Helper text'} selectDecorator={"color tag"}/>
             </div>
-           
         </section>
     );
 }

@@ -1,9 +1,19 @@
+import { useState } from "react";
 import InputFieldDiv from "../../types/InputField";
+import SelectElement from "./selectElement/SelectElement";
 import SearchIcon from "../../assets/images/icon-search.svg?react";
-// import PrefixIcon from "../../assets/images/"
+
 import './inputField.scss';
 
 export default function InputField({selectElement, inputType, inputDecorator, inputPlaceholder, selectDecorator, fieldTitle, helperText, onChange} : InputFieldDiv) {
+    const [dropdownOpened, setDropdownOpened] = useState(false); 
+
+    function toggleDropdown(){
+        setDropdownOpened(!dropdownOpened); 
+    }
+    function closeDropdown(){
+        setDropdownOpened(false)
+    }
 
     return(
         <div className="input-field">
@@ -13,11 +23,14 @@ export default function InputField({selectElement, inputType, inputDecorator, in
             : null}
 
             {/* Either input or select element +/- decorators */}
-            <div className="input-box">
+            <div className="input-box" 
+                tabIndex={0}
+                onClick={toggleDropdown}
+                onBlur={closeDropdown}
+            >
                 {selectElement ?
-                    <select>
-                        <option>this is a select element</option>
-                    </select>
+                    <SelectElement dropdownOpened={dropdownOpened} selectDecorator={selectDecorator}
+                    />
                     :
                     <input type={ inputType ? inputType : 'text'} 
                         placeholder={inputPlaceholder}
@@ -31,19 +44,14 @@ export default function InputField({selectElement, inputType, inputDecorator, in
                     <span className="icon-decorator"><SearchIcon/></span> 
                     : null
                 }
-                {selectDecorator == 'color tag'?
-                    <span className="color-tag-decorator">color tag</span>
-                    : null
-                }
             </div>
 
-            {/* Helper text to be displayed when invalid input */}
+            {/* Helper text */}
             {helperText 
-            // && invalid
             ? 
             <p className="helper-text">{helperText}</p>
-            : null }
-
+            : null 
+            }
         </div>
     );
 }
