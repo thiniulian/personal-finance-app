@@ -44,6 +44,7 @@
         }
         .select-element{
             color:$grey-900;
+            cursor: default;
         }
         input::placeholder{
             color:$beige-500;

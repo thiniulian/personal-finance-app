@@ -28,8 +28,8 @@ export default function SelectElement({dropdownOpened, selectDecorator}:selectPr
     function handlePosition(){
         if(!selectRef.current || !dropdownRef.current) return; 
         
-        const triggerRect = selectRef.current!.getBoundingClientRect();
-        const dropdownRect = dropdownRef.current!.getBoundingClientRect();
+        const triggerRect = selectRef.current.getBoundingClientRect();
+        const dropdownRect = dropdownRef.current.getBoundingClientRect();
         // Calculate available space
         const spaceBelow = window.innerHeight - triggerRect.bottom;
         const spaceAbove = triggerRect.top;
